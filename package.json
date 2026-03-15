@@ -1,0 +1,27 @@
+{
+  "name": "heyy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mayur-Rahangdale245/comfort-ai-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Mayur-Rahangdale245/comfort-ai-app/issues"
+  },
+  "homepage": "https://github.com/Mayur-Rahangdale245/comfort-ai-app#readme",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "groq-sdk": "^1.1.1"
+  }
+}
