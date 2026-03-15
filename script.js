@@ -4,7 +4,7 @@ let message=document.getElementById("userInput").value
 
 document.getElementById("chatBox").innerText="Soch raha hoon..."
 
-const response=await fetch("http://localhost:3000/chat",{
+const response=await fetch("https://comfort-ai-backend.onrender.com",{
 method:"POST",
 headers:{
 "Content-Type":"application/json"
