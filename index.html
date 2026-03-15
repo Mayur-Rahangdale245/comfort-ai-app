@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Hey Tum ❤️</title>
+
+<style>
+
+body{
+font-family:'Segoe UI',sans-serif;
+margin:0;
+background: linear-gradient(135deg,#ffd6e7,#fff0f5);
+text-align:center;
+overflow-x:hidden;
+}
+
+.container{
+padding:40px 20px;
+max-width:500px;
+margin:auto;
+}
+
+h1{
+color:#ff4f8b;
+}
+
+button{
+padding:12px 20px;
+margin:8px;
+border:none;
+border-radius:30px;
+background:#ff6fa5;
+color:white;
+font-size:16px;
+cursor:pointer;
+}
+
+button:hover{
+background:#ff4f8b;
+}
+
+#chatBox{
+margin-top:20px;
+font-size:18px;
+background:white;
+padding:15px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+min-height:50px;
+}
+
+.heartbeat{
+font-size:70px;
+margin:30px auto;
+animation:beat 1s infinite;
+filter: drop-shadow(0 0 10px #ff4f8b);
+}
+
+@keyframes beat{
+0%{transform:scale(1);}
+25%{transform:scale(1.2);}
+50%{transform:scale(1);}
+75%{transform:scale(1.2);}
+100%{transform:scale(1);}
+}
+.hearts{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+overflow:hidden;
+}
+
+.heart{
+position:absolute;
+color:#ff6fa5;
+font-size:20px;
+animation:float 6s linear infinite;
+}
+
+@keyframes float{
+0%{transform:translateY(100vh);opacity:1;}
+100%{transform:translateY(-10vh);opacity:0;}
+}
+#hugOverlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(255,182,193,0.95);
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+z-index:999;
+opacity:0;
+pointer-events:none;
+transition:0.5s;
+}
+
+.hugHeart{
+font-size:120px;
+animation:hugBeat 1s infinite;
+}
+
+.hugText{
+font-size:22px;
+margin-top:20px;
+color:#fff;
+}
+
+@keyframes hugBeat{
+0%{transform:scale(1);}
+50%{transform:scale(1.4);}
+100%{transform:scale(1);}
+}
+
+
+</style>
+</head>
+
+<body>
+
+<div class="hearts" id="hearts"></div>
+
+<div class="container">
+
+<h1>Hey… tum kya kar rahi ho? ❤️</h1>
+
+<p>
+Agar kabhi tumhe lage ki sab kuch zyada ho raha hai…<br>
+bas yaha aa jaana.<br>
+Main hamesha tumhare side hoon.
+</p>
+
+<input id="userInput" placeholder="Tum kya soch rahi ho...">
+
+<button onclick="sendMessage()">Send</button>
+
+<div id="chatBox"></div>
+
+<div class="heartbeat">❤️</div>
+
+<button onclick="hug()">Emergency Hug 🤗</button>
+
+<button onclick="loveNote()">Random Love Note 💌</button>
+
+</div>
+
+<script src="script.js"></script>
+<div id="hugOverlay">
+  <div class="hugHeart">❤️</div>
+  <p class="hugText">Imagine I'm hugging you right now 🤍</p>
+</div>
+
+</body>
+</html>
